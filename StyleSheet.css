@@ -1,0 +1,53 @@
+body{
+    background-color: silver;
+}
+
+.left{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.right{
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-bottom: 20px dimgrey solid;
+}
+
+.information{
+    border: 2px black solid;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+    text-align: center;
+    margin: 20% auto;
+}
+
+button{
+    padding: 5px;
+    position: relative;
+    margin: 10px auto;
+    width: 220px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+}
+
+.spaceShipWrapper{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.spaceShip{
+    position: relative;
+    width: 50%;
+    height: 50%;
+}
+

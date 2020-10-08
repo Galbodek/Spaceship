@@ -1,5 +1,6 @@
 body{
-    background-color: silver;
+    font-family: Arial, serif;
+    font-size: 20px;
 }
 
 .left{
@@ -8,6 +9,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
+    background-color: silver;
 }
 
 .right{
@@ -16,19 +18,29 @@ body{
     height: 100%;
     top: 0;
     right: 0;
-    border-bottom: 20px dimgrey solid;
+    background-color: lightblue;
 }
 
 .information{
     border: 2px black solid;
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     padding: 10px;
     text-align: center;
-    margin: 20% auto;
+    margin: 12% auto;
 }
 
-button{
+body.body-state1 .state1{display: block;}
+body.body-state2 .state2{display: block;}
+body.body-state3 .state3{display: block;}
+body.body-state4 .state4{display: block;}
+body.body-state5 .state5{display: block;}
+
+.state1, .state2, .state3, .state4, .state5{
+    display: none;
+}
+
+.button{
     padding: 5px;
     position: relative;
     margin: 10px auto;
@@ -37,17 +49,34 @@ button{
     color: white;
     font-size: 20px;
     height: 50px;
+    text-decoration: none;
+    border: black solid ;
 }
 
 .spaceShipWrapper{
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 46%;
+    transition: bottom 2000ms;
+}
+
+body.body-state3 .spaceShipWrapper,
+body.body-state4 .spaceShipWrapper{
+    bottom: 1000px;
 }
 
 .spaceShip{
     position: relative;
     width: 50%;
     height: 50%;
+}
+
+.ground{
+    position: absolute;
+    background-color: darkolivegreen;
+    width: 100%;
+    height: 20px;
+    left: 0;
+    bottom: 0;
 }
 

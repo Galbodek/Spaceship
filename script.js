@@ -33,7 +33,7 @@ var changeState = function (state){
             var randonNum = Math.round(Math.random()*10);
             console.log(randonNum);
             //success
-            if (randonNum > 5){
+            if (randonNum > 1){
                 changeState(4);
             }
             //failure

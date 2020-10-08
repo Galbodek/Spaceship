@@ -24,7 +24,7 @@ body{
 .information{
     border: 2px black solid;
     width: 500px;
-    height: 600px;
+    height: 300px;
     padding: 10px;
     text-align: center;
     margin: 12% auto;
@@ -37,7 +37,9 @@ body.body-state4 .state4{display: block;}
 body.body-state5 .state5{display: block;}
 
 .state1, .state2, .state3, .state4, .state5{
+    position: relative;
     display: none;
+    top: 20%;
 }
 
 .button{
@@ -53,16 +55,34 @@ body.body-state5 .state5{display: block;}
     border: black solid ;
 }
 
+.button:hover{
+    background-color: #5aa2ff;
+}
+
 .spaceShipWrapper{
     position: absolute;
+    width: 155px;
+    height: 312px;
     bottom: 0;
     left: 46%;
     transition: bottom 2000ms;
+    background: url("pictures/spaceship-removebg.png") no-repeat 0 0;
 }
 
+
+body.body-state1 .spaceShipWrapper{
+    transition: none;
+}
 body.body-state3 .spaceShipWrapper,
 body.body-state4 .spaceShipWrapper{
     bottom: 1000px;
+}
+
+body.body-state5 .spaceShipWrapper {
+    width: 300px;
+    height: 312px;
+    margin-left: -100px;
+    background-image: url("pictures/Boom2.png");
 }
 
 .spaceShip{

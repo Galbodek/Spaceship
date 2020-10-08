@@ -1,16 +1,29 @@
-// console.log('Hello JS');
-// $(document).ready(function (){
-//     // console.log('Hello there jQuery');
-//     // $('p span').html('Bla Bla');
-//     $('body').keydown(function (event){
-//         console.log(event.keyCode);
-//         $('#key').html(event.keyCode);
-//         if(event.keyCode === 13){
-//             $('#key').html('Bla Bla')
-//         }
-//     });
-//     }
-// );
+//make enter click buttons
+$(document).ready(function (){
+    $('body').keydown(function (event){
+        console.log(event.keyCode);
+        if (event.keyCode == 13){
+            var Bodyclass = $('body').attr('class');
+            console.log(Bodyclass);
+            if (Bodyclass == 'body-state1'){
+                changeState(2)
+            }
+            if (Bodyclass == 'body-state2'){
+                changeState(1)
+            }
+            if (Bodyclass == 'body-state3'){
+                changeState(1)
+            }
+            if (Bodyclass == 'body-state4'){
+                changeState(1)
+            }
+            if (Bodyclass == 'body-state5'){
+                changeState(1)
+            }
+        }
+    })
+}
+);
 
 var timer = null;
 var changeState = function (state){

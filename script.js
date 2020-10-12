@@ -31,6 +31,10 @@ var changeState = function (state){
     clearInterval(timer);
     var counter = 10;
     document.getElementById('countDown').innerHTML = counter;
+    if ( state == 1){
+        $('.right_space').attr('class', 'right');
+        $('.ground').css('display','block');
+    }
     if (state == 2){
         timer = setInterval(function() {
             counter = counter-1;
@@ -38,7 +42,7 @@ var changeState = function (state){
             if (counter <= 0){
                 changeState(3);
             }
-        }, 500)
+        }, 200)
     }
     else if (state == 3){
         document.body.className = 'body-state'+state;
@@ -57,7 +61,7 @@ var changeState = function (state){
     }
     else if (state == 4){
         $('.right').attr('class', 'right_space');
-        $('.ground').css('display','none');
+        $('.ground').attr('class','moon')
     }
 };
 

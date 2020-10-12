@@ -33,7 +33,7 @@ var changeState = function (state){
     document.getElementById('countDown').innerHTML = counter;
     if ( state == 1){
         $('.right_space').attr('class', 'right');
-        $('.ground').css('display','block');
+        $('.moon').attr('class', 'ground');
     }
     if (state == 2){
         timer = setInterval(function() {
